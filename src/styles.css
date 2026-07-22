@@ -1,0 +1,208 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #202020;
+  --secondary-color: #666666;
+  --secondary-color1: #6666663f;
+  --secondary-color2: #66666613;
+  --background-color: #ffffff;
+  --sidebarBg: #fcfaf8;
+  --sidebarBgHover: #ffefe5;
+  --red: #dc4c3e;
+  --red1: #d11807;
+  --font:
+    "Twemoji Country Flags", "Twemoji Country Flags", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", "Noto Sans", system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body {
+  font-family: var(--font);
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* side */
+.main-container .side {
+  flex: 1;
+  background-image: url(bg/bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-container .side h2{
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--secondary-color1);
+  backdrop-filter: blur(5px);
+  color: var(--secondary-color);
+  padding: 20px 0;
+}
+
+.main-container .side p{
+  font-size: 1rem;
+  text-align: center;
+  width: 80%;
+  background-color: var(--secondary-color1);
+  backdrop-filter: blur(5px);
+  color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+
+/* form */
+.main-container .form-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(bg/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 60%;
+  height: 100%;
+}
+
+.main-container .form-cont #form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+  background-color: var(--secondary-color1);
+  padding: 100px 50px;
+  gap: 10px;
+  width: 80%;
+}
+
+.main-container .form-cont legend {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--sidebarBg);
+  margin-bottom: 10px;
+}
+
+.main-container .form-cont label {
+  font-size: 1.1rem;
+  color: var(--sidebarBg);
+}
+
+.main-container .form-cont div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.main-container .form-cont input {
+  border: 1px solid var(--secondary-color1);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 15px 10px;
+}
+.main-container .form-cont input:focus {
+  outline: 1px solid var(--secondary-color1);
+}
+
+.main-container .form-cont input::placeholder {
+  color: var(--secondary-color1);
+  font-size: 0.9rem;
+}
+
+/* name field */
+.main-container .form-cont .name-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.main-container .form-cont .name-cont input {
+  flex: 1;
+}
+
+/* email field */
+.main-container .form-cont .email-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.main-container .form-cont .email-cont input {
+  flex: 1;
+}
+
+/* country field */
+.main-container .form-cont .country-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.main-container .form-cont .country-cont select {
+  flex: 1;
+  border: 1px solid var(--secondary-color1);
+  border-radius: 10px;
+  padding: 8px 5px;
+  color: var(--secondary-color);
+}
+
+/* postal field */
+.main-container .form-cont .postal-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.main-container .form-cont .postal-cont input {
+  flex: 1;
+}
+
+/* password field */
+.main-container .form-cont .password-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.main-container .form-cont .password-cont input {
+  flex: 1;
+}
+
+/* confirm-password field */
+.main-container .form-cont .confirm-password-cont {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px
+}
+
+.main-container .form-cont .confirm-password-cont input {
+  flex: 1;
+}
