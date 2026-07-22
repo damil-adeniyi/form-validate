@@ -12,8 +12,8 @@
   --secondary-color1: #6666663f;
   --secondary-color2: #66666613;
   --background-color: #ffffff;
-  --sidebarBg: #fcfaf8;
-  --sidebarBgHover: #ffefe5;
+  --sidebarBg: #ede1cb;
+  --sidebarBgHover: #efaf87;
   --red: #dc4c3e;
   --red1: #d11807;
   --font:
@@ -55,7 +55,7 @@ body {
   text-align: center;
   background-color: var(--secondary-color1);
   backdrop-filter: blur(5px);
-  color: var(--sidebarBg);
+  color: var(--background-color);
   text-transform: uppercase;
   padding: 20px 0;
 }
@@ -66,7 +66,7 @@ body {
   width: 60%;
   background-color: var(--secondary-color1);
   backdrop-filter: blur(5px);
-  color: var(--sidebarBg);
+  color: var(--background-color);
   padding: 20px;
   border-radius: 20px;
 }
@@ -122,8 +122,18 @@ body {
   padding: 15px 10px;
   font-size: 1rem;
 }
+
 .main-container .form-cont input:focus {
   outline: 1px solid var(--secondary-color1);
+}
+
+.main-container .form-cont input:valid {
+  outline: 1px solid var(--secondary-color1);
+}
+
+.main-container .form-cont input:invalid {
+  border-color: #990000;
+  background-color: #ffdddd;
 }
 
 .main-container .form-cont input::placeholder {
@@ -137,10 +147,30 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
 }
 
 .main-container .form-cont .name-cont input {
   flex: 1;
+}
+
+.main-container .form-cont .name-cont .error {
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: var(--red);
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  box-sizing: border-box;
+  width: fit-content;
+  top: 65px;
+  opacity: 0.85;
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-container .form-cont .name-cont .error.active {
+  padding: 0.3em;
 }
 
 /* email field */
@@ -149,10 +179,30 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  position: relative;
 }
 
 .main-container .form-cont .email-cont input {
   flex: 1;
+}
+
+.main-container .form-cont .email-cont .error {
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: var(--red);
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  box-sizing: border-box;
+  width: fit-content;
+  top: 65px;
+  opacity: 0.85;
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-container .form-cont .email-cont .error.active {
+  padding: 0.3em;
 }
 
 /* country field */
@@ -177,6 +227,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 5px;
 }
 
@@ -184,16 +235,63 @@ body {
   flex: 1;
 }
 
+.main-container .form-cont .postal-cont .postal-error {
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: var(--red);
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  box-sizing: border-box;
+  width: fit-content;
+  top: 65px;
+  opacity: 0.85;
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-container .form-cont .postal-cont .postal-error.active {
+  padding: 0.3em;
+}
+
 /* password field */
 .main-container .form-cont .password-cont {
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 5px;
+}
+
+.main-container .form-cont .password-cont i {
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .main-container .form-cont .password-cont input {
   flex: 1;
+}
+
+.main-container .form-cont .password-cont .pass-error {
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: var(--red);
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  box-sizing: border-box;
+  width: fit-content;
+  top: 65px;
+  opacity: 0.85;
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-container .form-cont .password-cont .pass-error.active {
+  padding: 0.3em;
 }
 
 /* confirm-password field */
@@ -201,9 +299,66 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  position: relative;
   gap: 5px;
+}
+
+.main-container .form-cont .confirm-password-cont i {
+  position: absolute;
+  top: 45px;
+  right: 20px;
+  cursor: pointer;
+  color: var(--secondary-color);
 }
 
 .main-container .form-cont .confirm-password-cont input {
   flex: 1;
+}
+.main-container .form-cont .confirm-password-cont .con-pass-error {
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: var(--red);
+  border-radius: 0 0 5px 5px;
+  position: absolute;
+  box-sizing: border-box;
+  width: fit-content;
+  top: 65px;
+  opacity: 0.85;
+  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-container .form-cont .confirm-password-cont .con-pass-error.active {
+  padding: 0.3em;
+}
+
+/* btn */
+.main-container .form-cont .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container .form-cont button {
+  background-color: var(--sidebarBg);
+  border: 1px solid var(--secondary-color1);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 15px 10px;
+  font-size: 1rem;
+  width: 40%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.main-container .form-cont button:hover {
+  background-color: var(--sidebarBgHover);
+  border: 1px solid var(--secondary-color1);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  padding: 15px 10px;
+  font-size: 1rem;
+  width: 40%;
+  cursor: pointer;
 }
