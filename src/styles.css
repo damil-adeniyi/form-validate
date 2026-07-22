@@ -49,27 +49,27 @@ body {
   gap: 20px;
 }
 
-.main-container .side h2{
-  font-size: 1.5rem;
+.main-container .side h2 {
+  font-size: 2rem;
   width: 100%;
   text-align: center;
   background-color: var(--secondary-color1);
   backdrop-filter: blur(5px);
-  color: var(--secondary-color);
+  color: var(--sidebarBg);
+  text-transform: uppercase;
   padding: 20px 0;
 }
 
-.main-container .side p{
+.main-container .side p {
   font-size: 1rem;
   text-align: center;
-  width: 80%;
+  width: 60%;
   background-color: var(--secondary-color1);
   backdrop-filter: blur(5px);
-  color: var(--secondary-color);
+  color: var(--sidebarBg);
   padding: 20px;
   border-radius: 20px;
 }
-
 
 /* form */
 .main-container .form-cont {
@@ -97,8 +97,7 @@ body {
 }
 
 .main-container .form-cont legend {
-  font-size: 2rem;
-  text-transform: uppercase;
+  font-size: 1.8rem;
   text-align: center;
   color: var(--sidebarBg);
   margin-bottom: 10px;
@@ -148,7 +147,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px
+  gap: 5px;
 }
 
 .main-container .form-cont .email-cont input {
@@ -160,7 +159,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px
+  gap: 5px;
 }
 
 .main-container .form-cont .country-cont select {
@@ -176,7 +175,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px
+  gap: 5px;
 }
 
 .main-container .form-cont .postal-cont input {
@@ -188,7 +187,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px
+  gap: 5px;
 }
 
 .main-container .form-cont .password-cont input {
@@ -200,7 +199,7 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 5px
+  gap: 5px;
 }
 
 .main-container .form-cont .confirm-password-cont input {
